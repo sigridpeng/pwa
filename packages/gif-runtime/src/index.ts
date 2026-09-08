@@ -1,0 +1,1 @@
+export const MINIMUM_GIF_FRAME_DELAY_MS = 20;
