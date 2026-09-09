@@ -20,8 +20,8 @@ export interface TrackingTiming {
 
 export type ArSessionEvent =
   | { readonly type: "START" }
-  | { readonly type: "PERMISSION_GRANTED" }
   | { readonly type: "ASSETS_LOADED" }
+  | { readonly type: "PERMISSION_GRANTED" }
   | { readonly type: "FOUND"; readonly nowMs: number }
   | { readonly type: "LOST"; readonly nowMs: number }
   | { readonly type: "TICK"; readonly nowMs: number }
@@ -47,22 +47,23 @@ export function reduceTrackingState(
 
   switch (event.type) {
     case "START":
-      return state.kind === "idle" || state.kind === "stopped"
-        ? { kind: "requesting-permission" }
-        : state;
-    case "PERMISSION_GRANTED":
-      return state.kind === "requesting-permission"
+      return state.kind === "idle" || state.kind === "stopped" || state.kind === "error"
         ? { kind: "loading-assets" }
         : state;
     case "ASSETS_LOADED":
-      return state.kind === "loading-assets" ? { kind: "scanning" } : state;
+      return state.kind === "loading-assets"
+        ? { kind: "requesting-permission" }
+        : state;
+    case "PERMISSION_GRANTED":
+      return state.kind === "requesting-permission" ? { kind: "scanning" } : state;
     case "FOUND":
       if (state.kind === "temporarily-lost" && state.wasVisible) {
         return { kind: "tracking" };
       }
-      return state.kind === "scanning" || state.kind === "temporarily-lost"
-        ? { kind: "warming-up", foundAtMs: event.nowMs }
-        : state;
+      if (state.kind !== "scanning" && state.kind !== "temporarily-lost") return state;
+      return timing.warmupMs === 0
+        ? { kind: "tracking" }
+        : { kind: "warming-up", foundAtMs: event.nowMs };
     case "LOST":
       if (state.kind === "tracking" || state.kind === "warming-up") {
         return {

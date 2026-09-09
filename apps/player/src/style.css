@@ -1,0 +1,184 @@
+:root {
+  color: #f6fbf8;
+  background: #07110f;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+button {
+  min-width: 44px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.loading-page,
+.player {
+  min-height: 100dvh;
+}
+
+.loading-page {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 25% 20%, rgb(52 122 98 / 32%), transparent 34%),
+    #07110f;
+}
+
+.card,
+.welcome-panel {
+  width: min(100%, 480px);
+}
+
+.card {
+  padding: 32px;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 28px;
+  background: rgb(12 29 25 / 92%);
+}
+
+.player {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding:
+    max(24px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right))
+    max(24px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
+  background:
+    linear-gradient(160deg, rgb(23 62 51 / 84%), rgb(7 17 15 / 98%)),
+    #07110f;
+}
+
+.player.is-active {
+  padding: 0;
+  background: #000;
+}
+
+.ar-viewport {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.welcome-panel {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 16px;
+  justify-items: start;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #9fe3c4;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 9vw, 4.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+p {
+  margin: 0;
+  color: #ccdad4;
+  line-height: 1.65;
+}
+
+.target-preview {
+  width: min(100%, 360px);
+  max-height: 32dvh;
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 18px;
+  object-fit: contain;
+  background: #fff;
+  box-shadow: 0 18px 60px rgb(0 0 0 / 28%);
+}
+
+.privacy-copy {
+  max-width: 44rem;
+  color: #9fb3aa;
+  font-size: 0.9rem;
+}
+
+.error-message {
+  color: #ffd2cb;
+}
+
+.notice-message {
+  color: #bdebd6;
+}
+
+.primary-button {
+  padding: 0 26px;
+  color: #062018;
+  background: #adf1d2;
+  box-shadow: 0 10px 35px rgb(40 222 157 / 20%);
+}
+
+.camera-ui {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding:
+    max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right))
+    max(18px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  pointer-events: none;
+}
+
+.status-pill,
+.stop-button {
+  color: #fff;
+  background: rgb(3 12 10 / 74%);
+  box-shadow: 0 4px 24px rgb(0 0 0 / 22%);
+  backdrop-filter: blur(12px);
+}
+
+.status-pill {
+  max-width: min(90vw, 440px);
+  padding: 10px 16px;
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 999px;
+  text-align: center;
+}
+
+.stop-button {
+  padding: 0 22px;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

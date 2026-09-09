@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "88f81b1a-bc45-4ee0-8ce3-c917b3597a42",
+  "slug": "demo-gif",
+  "title": "GIF 貼附測試卡",
+  "description": "將鏡頭對準測試卡，確認透明 GIF 播放時仍會持續貼附圖像。",
+  "target": {
+    "mindFile": "target.mind",
+    "previewFile": "target-preview.png",
+    "sourceAspectRatio": 1.8118279569892473,
+    "targetIndex": 0,
+    "sha256": "85b6ca67a4a9b78556be69f81149abc1e5845bb548e871854e1aaea1be96ab75"
+  },
+  "effect": {
+    "type": "gif",
+    "file": "effect.gif",
+    "sha256": "a3e2e03d7853fec77f0204ce91e661301cf4bd7ddcf69f24aee9b776558816f6",
+    "intrinsicWidth": 500,
+    "intrinsicHeight": 362,
+    "placement": {
+      "x": 0,
+      "y": 0,
+      "z": 0.01,
+      "width": 1,
+      "rotationDeg": 0,
+      "opacity": 1
+    },
+    "playback": {
+      "loop": true,
+      "speed": 1,
+      "startOnFound": true,
+      "resetOnLost": false
+    }
+  },
+  "tracking": {
+    "warmupMs": 0,
+    "lostGraceMs": 0,
+    "fadeInMs": 0,
+    "fadeOutMs": 0,
+    "filterMinCF": 0.05,
+    "filterBeta": 1000,
+    "missTolerance": 0,
+    "warmupTolerance": 1
+  },
+  "ui": {
+    "scanHint": "請讓整張測試卡進入畫面，並避免反光",
+    "foundHint": "已辨識，GIF 正在貼附圖像播放",
+    "themeColor": "#201934",
+    "showTargetThumbnail": true
+  },
+  "privacy": {
+    "cameraFramesStayOnDevice": true
+  },
+  "createdAt": "2026-09-09T00:00:00+08:00",
+  "updatedAt": "2026-09-09T00:00:00+08:00"
+}

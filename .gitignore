@@ -1,9 +1,16 @@
 node_modules/
 dist/
 coverage/
+packages/ar-core/.test-dist/
 playwright-report/
 test-results/
 _site/
+apps/player/public/experiences/demo/target.mind
+apps/player/public/experiences/demo/target-preview.png
+apps/player/public/experiences/demo/effect.png
+apps/player/public/experiences/demo-gif/target.mind
+apps/player/public/experiences/demo-gif/target-preview.png
+apps/player/public/experiences/demo-gif/effect.gif
 *.log
 *.md
 .DS_Store

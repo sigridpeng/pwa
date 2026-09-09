@@ -3,5 +3,26 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "scripts": {}
+  "scripts": {
+    "predev": "node ../../scripts/generate-player-demo.mjs",
+    "dev": "vite",
+    "prebuild": "node ../../scripts/generate-player-demo.mjs",
+    "build": "vite build",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@image-ar/ar-core": "0.0.0",
+    "@image-ar/contracts": "0.0.0",
+    "gifuct-js": "2.1.2",
+    "mind-ar": "1.2.5",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "three": "0.160.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "6.1.1",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7",
+    "@types/three": "0.160.0"
+  }
 }

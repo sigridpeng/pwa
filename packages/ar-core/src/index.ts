@@ -6,6 +6,13 @@ export type {
   Unsubscribe,
 } from "./ImageTrackingAdapter.js";
 export {
+  ArSessionController,
+  type ArEffect,
+  type ArSessionControllerOptions,
+  type ArSessionStateListener,
+  type LoadedArAssets,
+} from "./ArSessionController.js";
+export {
   createInitialTrackingState,
   reduceTrackingState,
   type ArSessionEvent,

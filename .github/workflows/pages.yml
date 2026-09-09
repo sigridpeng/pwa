@@ -1,4 +1,4 @@
-name: Deploy Phase 0 to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -31,6 +31,8 @@ jobs:
         run: npm audit --audit-level=low
       - name: Typecheck
         run: npm run typecheck
+      - name: Test
+        run: npm test
       - name: Build Pages artifact
         run: npm run build:pages
       - name: Configure Pages

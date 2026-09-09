@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "f18dd19c-6bd8-4e57-bf64-568e45f40548",
+  "slug": "demo",
+  "title": "貼附測試卡",
+  "description": "將鏡頭對準測試卡，確認透明特效會跟著圖像移動、旋轉與縮放。",
+  "target": {
+    "mindFile": "target.mind",
+    "previewFile": "target-preview.png",
+    "sourceAspectRatio": 1.8118279569892473,
+    "targetIndex": 0,
+    "sha256": "85b6ca67a4a9b78556be69f81149abc1e5845bb548e871854e1aaea1be96ab75"
+  },
+  "effect": {
+    "type": "png",
+    "file": "effect.png",
+    "sha256": "e5cad0ef95e79155b202a47fdc4fcf6e14d6248fe556b5dbcca216cad47eeae2",
+    "intrinsicWidth": 800,
+    "intrinsicHeight": 440,
+    "placement": {
+      "x": 0,
+      "y": 0,
+      "z": 0.01,
+      "width": 1,
+      "rotationDeg": 0,
+      "opacity": 1
+    }
+  },
+  "tracking": {
+    "warmupMs": 0,
+    "lostGraceMs": 0,
+    "fadeInMs": 0,
+    "fadeOutMs": 0,
+    "filterMinCF": 0.05,
+    "filterBeta": 1000,
+    "missTolerance": 0,
+    "warmupTolerance": 1
+  },
+  "ui": {
+    "scanHint": "請讓整張測試卡進入畫面，並避免反光",
+    "foundHint": "已辨識，特效正在貼附圖像",
+    "themeColor": "#10231f",
+    "showTargetThumbnail": true
+  },
+  "privacy": {
+    "cameraFramesStayOnDevice": true
+  },
+  "createdAt": "2026-09-09T00:00:00+08:00",
+  "updatedAt": "2026-09-09T00:00:00+08:00"
+}

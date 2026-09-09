@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#07101f" />
     <link rel="icon" href="data:," />
-    <title>Image AR PWA — Phase 0</title>
+    <title>Image AR PWA</title>
     <style>
       :root { color: #f7fbff; background: #07101f; font-family: system-ui, sans-serif; }
       body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; }
@@ -14,14 +14,18 @@
       p { color: #b8c8df; line-height: 1.6; }
       nav { display: grid; gap: 16px; margin-top: 28px; }
       a { display: block; min-height: 64px; padding: 20px; border-radius: 16px; color: #07101f; background: #73fbd3; font-size: 1.1rem; font-weight: 800; text-decoration: none; }
-      a:last-child { background: #9ca9ff; }
+      a:nth-child(2) { background: #9ca9ff; }
+      a:last-child { color: #f7fbff; background: #173a31; border: 1px solid #73fbd3; }
     </style>
   </head>
   <body>
     <main>
-      <h1>Image AR PWA — Phase 0</h1>
-      <p>請先在另一個螢幕開啟各測試頁中的辨識圖，再用手機測試。相機畫面只在裝置內處理，不會上傳。</p>
-      <nav aria-label="Phase 0 測試">
+      <h1>Image AR PWA</h1>
+      <p>相機畫面只在裝置內處理，不會拍照、錄影或上傳。Phase 0 尖峰入口保留供回歸測試。</p>
+      <nav aria-label="AR 體驗與測試入口">
+        <a href="./ar/demo/">開啟正式 Player Demo</a>
+        <a href="./ar/demo-gif/">開啟正式 GIF Player Demo</a>
+        <a href="./ar/demo-gif/">開啟正式 GIF Player Demo</a>
         <a href="./png/">測試透明 PNG</a>
         <a href="./gif/">測試透明 GIF</a>
       </nav>

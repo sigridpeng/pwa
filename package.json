@@ -25,6 +25,7 @@
     "dev:spike:gif": "npm run dev --workspace @image-ar/spike-mindar-gif",
     "build": "npm run build --workspaces --if-present",
     "build:pages": "npm run build && node scripts/assemble-pages.mjs",
+    "fixtures:player": "node scripts/generate-player-demo.mjs",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
     "lint": "npm run lint --workspaces --if-present",
