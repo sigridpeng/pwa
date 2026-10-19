@@ -1,4 +1,4 @@
-import { cpSync, mkdirSync, readdirSync, rmSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, readdirSync, rmSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -20,3 +20,7 @@ for (const entry of readdirSync(resolve(player, "experiences"), { withFileTypes:
   mkdirSync(route, { recursive: true });
   cpSync(resolve(player, "index.html"), resolve(route, "index.html"));
 }
+
+// Packaged games are already complete sites; each one is served from its own folder.
+const games = resolve(root, "games");
+if (existsSync(games)) cpSync(games, output, { recursive: true });

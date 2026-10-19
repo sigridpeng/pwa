@@ -1,0 +1,27 @@
+{
+  "name": "童話之夢",
+  "short_name": "童話之夢",
+  "description": "這個神奇的夢境，正以幻想形式重現著你的過去，\n無論是記憶深刻的事，還是早已遺忘的痕跡，\n它都靜靜佇立在那裏……\n\n你可以選擇快速清醒，當然仔細挖掘也行，\n或許能找回你深埋於心底的珍貴回憶……\n\n但無論如何，這都只是夢境，別流連忘返，別迷失自己，\n說聲早安後，一切才真的有意義。",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#07110f",
+  "theme_color": "#10231f",
+  "lang": "zh-Hant",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
